@@ -1,0 +1,6 @@
+/target/
+/.pytest_cache/
+/pkg/
+__pycache__/
+*.pyc
+.DS_Store

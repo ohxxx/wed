@@ -1,0 +1,10 @@
+[package]
+name = "crypto-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aes-gcm = "0.10"
+argon2 = "0.5"
+base64 = "0.22"
+getrandom = { version = "0.2", features = ["js"] }

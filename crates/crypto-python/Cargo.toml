@@ -1,0 +1,12 @@
+[package]
+name = "crypto-python"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "wed_crypto"
+crate-type = ["cdylib"]
+
+[dependencies]
+crypto-core = { path = "../crypto-core" }
+pyo3 = { version = "0.22", features = ["extension-module"] }
