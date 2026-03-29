@@ -5,6 +5,7 @@
 node_modules/
 examples/react/pkg/
 packages/wedts/dist/
+dist/
 __pycache__/
 *.pyc
 .DS_Store

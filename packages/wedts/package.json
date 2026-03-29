@@ -1,6 +1,6 @@
 {
   "name": "@ohxxx/wedts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Typed npm wrapper for the WED Rust/WASM crypto package",
   "repository": {
@@ -28,7 +28,7 @@
     "prepare": "npm run build:wasm",
     "pretest": "npm run build:wasm",
     "pretypecheck": "npm run build:wasm",
-    "test": "node tests/runtime.mjs",
+    "test": "node --experimental-wasm-modules tests/runtime.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {

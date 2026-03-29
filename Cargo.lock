@@ -156,7 +156,7 @@ dependencies = [
 
 [[package]]
 name = "crypto-core"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "aes-gcm",
  "argon2",
@@ -166,7 +166,7 @@ dependencies = [
 
 [[package]]
 name = "crypto-python"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "crypto-core",
  "pyo3",
@@ -174,7 +174,7 @@ dependencies = [
 
 [[package]]
 name = "crypto-wasm"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "crypto-core",
  "js-sys",

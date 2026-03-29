@@ -6,6 +6,6 @@
     "@ohxxx/wedts": "file:../../packages/wedts"
   },
   "scripts": {
-    "test": "node test.mjs"
+    "test": "node --experimental-wasm-modules test.mjs"
   }
 }

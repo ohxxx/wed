@@ -135,6 +135,55 @@ bash examples/python/run_example_test.sh
 
 See [`tests/vectors/README.md`](tests/vectors/README.md) for the validation matrix.
 
+## Release
+
+The repository root includes a unified release script at [`release.py`](release.py).
+
+It does three things in one flow:
+
+- optionally syncs all package versions to one version number
+- runs the release verification commands
+- publishes both `@ohxxx/wedts` and `wedpy`
+
+Dry-run with the current synced version:
+
+```bash
+python3 release.py --dry-run
+```
+
+Dry-run with a target version and sync every package file first:
+
+```bash
+python3 release.py 0.1.1 --dry-run
+```
+
+Publish a new shared version:
+
+```bash
+python3 release.py 0.1.1
+```
+
+Real publish runs require an explicit version argument.
+
+The script updates these files together before publishing:
+
+- `packages/wedts/package.json`
+- `packages/wedts/package-lock.json`
+- `crates/crypto-core/Cargo.toml`
+- `crates/crypto-wasm/Cargo.toml`
+- `crates/crypto-python/Cargo.toml`
+- `crates/crypto-python/pyproject.toml`
+
+Environment requirements:
+
+- `cargo`
+- `wasm-pack`
+- `npm`
+- `maturin`
+- `twine` for `--dry-run`
+- valid npm credentials for a real release
+- `MATURIN_PYPI_TOKEN` for a real PyPI release, or `PYPI_TOKEN` as an alias that the script will map automatically
+
 ## Security Scope
 
 This project gives you authenticated symmetric encryption for request payloads. It does not hide secrets from a user who controls the browser runtime, because a frontend that can decrypt must also have access to the passphrase or an equivalent derived key.
