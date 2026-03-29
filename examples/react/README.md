@@ -1,17 +1,27 @@
 # React Example
 
-1. Build the WASM package:
+1. Run the complete example test:
 
 ```bash
-wasm-pack build crates/crypto-wasm --target bundler --out-dir pkg
+npm test
 ```
 
-2. Load it in a React app:
+This will:
+
+- build the WASM package into `examples/react/pkg`
+- execute the example script against the generated package
+
+2. If you want to build manually:
+
+```bash
+cd ../../crates/crypto-wasm
+wasm-pack build . --dev --target nodejs --out-dir ../../examples/react/pkg
+```
+
+3. Load it in a React app:
 
 ```ts
-import init, { decryptJson, encryptJson } from "./pkg/crypto_wasm";
-
-await init();
+import { decryptJson, encryptJson } from "./pkg/crypto_wasm.js";
 
 const token = encryptJson("shared-passphrase", { hello: "world" });
 const payload = decryptJson("shared-passphrase", token);

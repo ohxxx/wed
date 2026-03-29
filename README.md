@@ -54,6 +54,13 @@ Run the WASM tests:
 wasm-pack test --node crates/crypto-wasm
 ```
 
+Run the complete React example test:
+
+```bash
+cd examples/react
+npm test
+```
+
 ## Python Usage
 
 Create a virtualenv, install the extension in editable mode, then import it:
@@ -77,6 +84,12 @@ Run the Python tests:
 ```bash
 source /tmp/wed-venv/bin/activate
 pytest crates/crypto-python/tests/test_crypto.py -q
+```
+
+Run the complete Python example test:
+
+```bash
+bash examples/python/run_example_test.sh
 ```
 
 ## Security Note

@@ -1,0 +1,9 @@
+{
+  "name": "wed-react-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pretest": "cd ../../crates/crypto-wasm && wasm-pack build . --dev --target nodejs --out-dir ../../examples/react/pkg",
+    "test": "node test.mjs"
+  }
+}
