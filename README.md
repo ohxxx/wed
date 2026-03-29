@@ -31,18 +31,16 @@ cargo test -p crypto-core
 
 ## React / WASM Usage
 
-Build the package for a bundler-based React app:
+Install the published npm package:
 
 ```bash
-wasm-pack build crates/crypto-wasm --target bundler --out-dir pkg
+npm install @ohxxx/wedts
 ```
 
-Then import the generated package in React:
+Then import it in React:
 
 ```ts
-import init, { decryptText, encryptJson, encryptText } from "./pkg/crypto_wasm";
-
-await init();
+import { decryptText, encryptJson, encryptText } from "@ohxxx/wedts";
 
 const token = encryptJson("shared-passphrase", { message: "hello" });
 const plaintext = decryptText("shared-passphrase", token);
@@ -58,6 +56,7 @@ Run the complete React example test:
 
 ```bash
 cd examples/react
+npm install
 npm test
 ```
 
@@ -73,7 +72,7 @@ maturin develop --manifest-path crates/crypto-python/Cargo.toml
 ```
 
 ```python
-from wed_crypto import decrypt_json, encrypt_json
+from wedpy import decrypt_json, encrypt_json
 
 token = encrypt_json("shared-passphrase", {"message": "hello"})
 payload = decrypt_json("shared-passphrase", token)

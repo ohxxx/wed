@@ -1,6 +1,6 @@
 import json
 
-from wed_crypto import decrypt_json, decrypt_text, encrypt_json, encrypt_text
+from wedpy import decrypt_json, decrypt_text, encrypt_json, encrypt_text
 
 
 def test_encrypt_then_decrypt_text_roundtrip():

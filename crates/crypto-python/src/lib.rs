@@ -37,7 +37,7 @@ fn decrypt_json(py: Python<'_>, passphrase: &str, token: &str) -> PyResult<Py<Py
 }
 
 #[pymodule]
-fn wed_crypto(_py: Python<'_>, module: &Bound<'_, PyModule>) -> PyResult<()> {
+fn wedpy(_py: Python<'_>, module: &Bound<'_, PyModule>) -> PyResult<()> {
     module.add_function(wrap_pyfunction!(encrypt_text, module)?)?;
     module.add_function(wrap_pyfunction!(decrypt_text, module)?)?;
     module.add_function(wrap_pyfunction!(encrypt_json, module)?)?;

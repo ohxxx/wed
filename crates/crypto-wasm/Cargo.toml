@@ -2,6 +2,9 @@
 name = "crypto-wasm"
 version = "0.1.0"
 edition = "2021"
+description = "Rust/WASM symmetric encryption package shared between React and Python"
+license = "MIT"
+repository = "https://github.com/ohxxx/wed"
 
 [lib]
 crate-type = ["cdylib", "rlib"]

@@ -1,0 +1,37 @@
+{
+  "name": "@ohxxx/wedts",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Typed npm wrapper for the WED Rust/WASM crypto package",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohxxx/wed.git"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "dist/wasm/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build:wasm": "node scripts/build-wasm.mjs",
+    "prepare": "npm run build:wasm",
+    "pretest": "npm run build:wasm",
+    "pretypecheck": "npm run build:wasm",
+    "test": "node tests/runtime.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

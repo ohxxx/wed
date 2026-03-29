@@ -29,7 +29,7 @@ maturin develop --manifest-path crates/crypto-python/Cargo.toml
 4. Use it:
 
 ```python
-from wed_crypto import decrypt_text, encrypt_text
+from wedpy import decrypt_text, encrypt_text
 
 token = encrypt_text("shared-passphrase", "hello")
 plaintext = decrypt_text("shared-passphrase", token)

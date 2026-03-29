@@ -2,7 +2,9 @@
 /.pytest_cache/
 /pkg/
 /.venv-example-python/
+node_modules/
 examples/react/pkg/
+packages/wedts/dist/
 __pycache__/
 *.pyc
 .DS_Store

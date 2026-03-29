@@ -1,4 +1,4 @@
-from wed_crypto import decrypt_json, decrypt_text, encrypt_json, encrypt_text
+from wedpy import decrypt_json, decrypt_text, encrypt_json, encrypt_text
 
 
 def main():

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { decryptJson, decryptText, encryptJson, encryptText } from "./pkg/crypto_wasm.js";
+import { decryptJson, decryptText, encryptJson, encryptText } from "@ohxxx/wedts";
 
 const textToken = encryptText("shared-passphrase", "hello from react");
 assert.equal(decryptText("shared-passphrase", textToken), "hello from react");
